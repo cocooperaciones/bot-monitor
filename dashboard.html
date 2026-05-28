@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WhatsApp Bot Monitor</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0a0c0f; --surface: #111418; --surface2: #181c22; --border: #1e2530;
+    --green: #00e676; --green-dim: #00e67622; --yellow: #ffea00; --yellow-dim: #ffea0018;
+    --red: #ff3d5a; --red-dim: #ff3d5a18; --blue: #2979ff; --blue-dim: #2979ff18;
+    --text: #e8eaf0; --muted: #5a6070;
+    --mono: 'DM Mono', monospace; --sans: 'Syne', sans-serif;
+  }
+  body { background: var(--bg); color: var(--text); font-family: var(--sans); min-height: 100vh; overflow-x: hidden; }
+  body::before {
+    content: ''; position: fixed; inset: 0;
+    background-image: linear-gradient(rgba(0,230,118,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,230,118,.03) 1px, transparent 1px);
+    background-size: 40px 40px; pointer-events: none; z-index: 0;
+  }
+  .wrap { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 32px 24px; }
+
+  /* Header */
+  header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 32px; gap: 16px; flex-wrap: wrap; }
+  .logo-area { display: flex; align-items: center; gap: 14px; }
+  .logo-icon { width: 44px; height: 44px; background: var(--green); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; animation: pulse 3s ease-in-out infinite; }
+  @keyframes pulse {
+    0%,100% { box-shadow: 0 0 24px rgba(0,230,118,.4), 0 0 60px rgba(0,230,118,.1); }
+    50%      { box-shadow: 0 0 36px rgba(0,230,118,.7), 0 0 80px rgba(0,230,118,.2); }
+  }
+  h1 { font-size: 1.7rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+  h1 span { color: var(--green); }
+  .subtitle { font-family: var(--mono); font-size: .7rem; color: var(--muted); margin-top: 3px; }
+  .header-right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+  .refresh-btn { background: var(--surface2); border: 1px solid var(--border); color: var(--green); font-family: var(--mono); font-size: .72rem; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all .2s; letter-spacing: .05em; }
+  .refresh-btn:hover { background: var(--green-dim); border-color: var(--green); }
+  .last-update { font-family: var(--mono); font-size: .65rem; color: var(--muted); }
+
+  /* Filters */
+  .filters {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 24px;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  .filter-group { display: flex; flex-direction: column; gap: 5px; }
+  .filter-group label { font-family: var(--mono); font-size: .6rem; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; }
+  .filter-group input, .filter-group select {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: .72rem;
+    padding: 7px 12px;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color .2s;
+  }
+  .filter-group input:focus, .filter-group select:focus { border-color: var(--green); }
+  .filter-group select option { background: var(--surface2); }
+  .filter-actions { display: flex; gap: 8px; align-items: flex-end; }
+  .btn-filter { background: var(--green); color: #000; font-family: var(--mono); font-size: .7rem; font-weight: 700; padding: 8px 16px; border: none; border-radius: 8px; cursor: pointer; letter-spacing: .05em; transition: opacity .2s; }
+  .btn-filter:hover { opacity: .85; }
+  .btn-clear { background: transparent; border: 1px solid var(--border); color: var(--muted); font-family: var(--mono); font-size: .7rem; padding: 8px 14px; border-radius: 8px; cursor: pointer; transition: all .2s; }
+  .btn-clear:hover { border-color: var(--red); color: var(--red); }
+  .filter-badge { font-family: var(--mono); font-size: .65rem; color: var(--yellow); align-self: center; }
+
+  /* KPIs */
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .kpi { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; position: relative; overflow: hidden; transition: transform .2s; }
+  .kpi:hover { transform: translateY(-2px); }
+  .kpi::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+  .kpi.green::before { background: var(--green); }
+  .kpi.yellow::before { background: var(--yellow); }
+  .kpi.red::before { background: var(--red); }
+  .kpi.blue::before { background: var(--blue); }
+  .kpi-label { font-family: var(--mono); font-size: .65rem; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
+  .kpi-value { font-size: 2.2rem; font-weight: 800; margin: 6px 0 2px; line-height: 1; }
+  .kpi.green .kpi-value { color: var(--green); }
+  .kpi.yellow .kpi-value { color: var(--yellow); }
+  .kpi.red .kpi-value { color: var(--red); }
+  .kpi.blue .kpi-value { color: var(--blue); }
+  .kpi-sub { font-family: var(--mono); font-size: .65rem; color: var(--muted); }
+
+  /* Charts */
+  .chart-section { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px; margin-bottom: 24px; }
+  .section-title { font-size: .8rem; font-family: var(--mono); color: var(--muted); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  /* Bar chart */
+  #bar-chart { display: flex; flex-direction: column; gap: 8px; }
+  .bar-wrap { display: flex; align-items: center; gap: 10px; width: 100%; }
+
+  .bar-name { font-family: var(--mono); font-size: .68rem; color: var(--text); text-align: right; white-space: nowrap; min-width: 160px; width: 160px; flex-shrink: 0; }
+  .bar-value { font-family: var(--mono); font-size: .65rem; color: var(--green); white-space: nowrap; margin-left: 6px; }
+  .bar-track { flex: 1; height: 28px; background: var(--surface2); border-radius: 6px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 6px; transition: width .6s cubic-bezier(.4,0,.2,1); position: relative; cursor: pointer; }
+  .bar-fill.responded { background: linear-gradient(90deg, #00c853, var(--green)); }
+  .bar-fill.timeout   { background: linear-gradient(90deg, #b71c1c, var(--red)); }
+
+  /* Line chart (promedio histórico) */
+  #line-chart-wrap { position: relative; padding-left: 40px; }
+  #line-canvas { width: 100%; height: 180px; display: block; }
+  .lc-y-label { position: absolute; left: 0; font-family: var(--mono); font-size: .58rem; color: var(--muted); transform: translateY(-50%); }
+  .lc-x-labels { display: flex; justify-content: space-between; margin-top: 6px; padding-left: 40px; }
+  .lc-x-label { font-family: var(--mono); font-size: .56rem; color: var(--muted); }
+
+  /* Scatter */
+  #scatter { width: 100%; height: 200px; position: relative; overflow: visible; }
+  .dot { position: absolute; width: 10px; height: 10px; border-radius: 50%; transform: translate(-50%, -50%); cursor: pointer; transition: transform .2s; }
+  .dot:hover { transform: translate(-50%, -50%) scale(1.6); }
+  .dot.responded { background: var(--green); box-shadow: 0 0 8px var(--green); }
+  .dot.timeout   { background: var(--red);   box-shadow: 0 0 8px var(--red); }
+  .y-axis-label { position: absolute; left: -8px; font-family: var(--mono); font-size: .58rem; color: var(--muted); transform: translateY(-50%); }
+
+  /* Table */
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-family: var(--mono); font-size: .75rem; }
+  thead th { text-align: left; padding: 10px 14px; color: var(--muted); font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: var(--surface); }
+  tbody tr { border-bottom: 1px solid var(--border); transition: background .15s; }
+  tbody tr:hover { background: var(--surface2); }
+  tbody tr:last-child { border: none; }
+  td { padding: 12px 14px; vertical-align: middle; }
+  td.phone { color: var(--green); }
+  td.name  { color: var(--text); font-family: var(--sans); font-weight: 700; }
+  td.time  { color: var(--yellow); }
+  td.response { color: var(--muted); max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: .62rem; letter-spacing: .05em; font-weight: 500; text-transform: uppercase; }
+  .badge.responded    { background: var(--green-dim);  color: var(--green);  border: 1px solid rgba(0,230,118,.3); }
+  .badge.timeout      { background: var(--red-dim);    color: var(--red);    border: 1px solid rgba(255,61,90,.3); }
+  .badge.error        { background: var(--red-dim);    color: var(--red);    border: 1px solid rgba(255,61,90,.3); }
+  .badge.sent_waiting { background: var(--yellow-dim); color: var(--yellow); border: 1px solid rgba(255,234,0,.3); }
+
+  .empty { text-align: center; padding: 60px 20px; color: var(--muted); font-family: var(--mono); font-size: .8rem; line-height: 1.8; }
+  .empty-icon { font-size: 3rem; margin-bottom: 16px; opacity: .4; }
+
+  @media (max-width: 600px) { h1 { font-size: 1.3rem; } .kpi-value { font-size: 1.7rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Header -->
+  <header>
+    <div class="logo-area">
+      <div class="logo-icon">📡</div>
+      <div>
+        <h1>Bot <span>Monitor</span></h1>
+        <div class="subtitle">WHATSAPP · RESPONSE TIME TRACKER</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <button class="refresh-btn" onclick="loadData()">↻ REFRESH</button>
+      <div class="last-update" id="last-update">–</div>
+    </div>
+  </header>
+
+  <!-- Filters -->
+  <div class="filters">
+    <div class="filter-group">
+      <label>Fecha desde</label>
+      <input type="date" id="f-date-from" onchange="applyFilters()" />
+    </div>
+    <div class="filter-group">
+      <label>Fecha hasta</label>
+      <input type="date" id="f-date-to" onchange="applyFilters()" />
+    </div>
+    <div class="filter-group">
+      <label>Hora desde</label>
+      <input type="time" id="f-time-from" onchange="applyFilters()" />
+    </div>
+    <div class="filter-group">
+      <label>Hora hasta</label>
+      <input type="time" id="f-time-to" onchange="applyFilters()" />
+    </div>
+    <div class="filter-group">
+      <label>Bot</label>
+      <select id="f-bot" onchange="applyFilters()">
+        <option value="">Todos</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Estado</label>
+      <select id="f-status" onchange="applyFilters()">
+        <option value="">Todos</option>
+        <option value="responded">Respondió</option>
+        <option value="timeout">Timeout</option>
+        <option value="error">Error</option>
+      </select>
+    </div>
+    <div class="filter-actions">
+      <button class="btn-clear" onclick="clearFilters()">✕ Limpiar</button>
+    </div>
+    <div class="filter-badge" id="filter-badge"></div>
+  </div>
+
+  <!-- KPIs -->
+  <div class="kpis">
+    <div class="kpi green">
+      <div class="kpi-label">Respondieron</div>
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:8px;">
+        <div class="kpi-value" id="k-ok">—</div>
+        <div style="text-align:right;padding-bottom:4px;">
+          <div style="font-family:var(--mono);font-size:.6rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;">Monitoreando</div>
+          <div style="font-family:var(--mono);font-size:1.1rem;font-weight:700;color:rgba(0,230,118,.5);" id="k-total">—</div>
+        </div>
+      </div>
+      <div class="kpi-sub">chatbots activos</div>
+    </div>
+    <div class="kpi yellow">
+      <div class="kpi-label">Tiempo promedio</div>
+      <div class="kpi-value" id="k-avg">—</div>
+      <div class="kpi-sub">segundos</div>
+    </div>
+    <div class="kpi blue">
+      <div class="kpi-label">Más rápido</div>
+      <div class="kpi-value" id="k-min">—</div>
+      <div class="kpi-sub">segundos</div>
+    </div>
+    <div class="kpi red">
+      <div class="kpi-label">Timeouts</div>
+      <div class="kpi-value" id="k-to">—</div>
+      <div class="kpi-sub">sin respuesta</div>
+    </div>
+  </div>
+
+  <!-- Bar chart -->
+  <div class="chart-section">
+    <div class="section-title">Tiempo de respuesta por bot (promedio)</div>
+    <div id="bar-chart"></div>
+  </div>
+
+  <!-- Line chart: promedio histórico por día -->
+  <div class="chart-section">
+    <div class="section-title">Evolución del tiempo promedio por día</div>
+    <div id="line-chart-wrap">
+      <canvas id="line-canvas"></canvas>
+    </div>
+    <div class="lc-x-labels" id="lc-x-labels"></div>
+  </div>
+
+  <!-- Scatter -->
+  <div class="chart-section">
+    <div class="section-title">Dispersión (hora de prueba vs segundos)</div>
+    <div style="position:relative; padding-left: 32px;">
+      <div id="scatter"></div>
+    </div>
+  </div>
+
+  <!-- Table -->
+  <div class="chart-section">
+    <div class="section-title">Registro detallado</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Bot / Nombre</th>
+            <th>Número</th>
+            <th>Hora prueba</th>
+            <th>Resp. (seg)</th>
+            <th>Estado</th>
+            <th>Respuesta recibida</th>
+          </tr>
+        </thead>
+        <tbody id="tbl-body"></tbody>
+      </table>
+      <div class="empty" id="empty-state">
+        <div class="empty-icon">🤖</div>
+        Aún no hay datos.<br>Ejecuta el agente primero.
+      </div>
+    </div>
+  </div>
+
+</div>
+<script>
+let DATA = [];
+let FILTERED = [];
+
+// ── Load ──────────────────────────────────────────────────────────────────────
+function loadData() {
+  fetch('./results.json?t=' + Date.now())
+    .then(r => r.json())
+    .then(d => { DATA = d; populateBotFilter(); applyFilters(); updateTimestamp(); })
+    .catch(() => {});
+}
+
+function updateTimestamp() {
+  document.getElementById('last-update').textContent = 'Actualizado ' + new Date().toLocaleTimeString('es-CO');
+}
+
+// ── Filters ───────────────────────────────────────────────────────────────────
+function populateBotFilter() {
+  const sel = document.getElementById('f-bot');
+  const current = sel.value;
+  const names = [...new Set(DATA.map(d => d.name || d.phone))].sort();
+  sel.innerHTML = '<option value="">Todos</option>' + names.map(n => `<option value="${esc(n)}">${esc(n)}</option>`).join('');
+  if (current) sel.value = current;
+}
+
+function applyFilters() {
+  const dateFrom = document.getElementById('f-date-from').value;
+  const dateTo   = document.getElementById('f-date-to').value;
+  const timeFrom = document.getElementById('f-time-from').value;
+  const timeTo   = document.getElementById('f-time-to').value;
+  const bot      = document.getElementById('f-bot').value;
+  const status   = document.getElementById('f-status').value;
+
+  FILTERED = DATA.filter(d => {
+    const ts = d.timestamp ? new Date(d.timestamp) : null;
+    if (!ts) return true;
+    const dateStr = ts.toISOString().slice(0,10);
+    const timeStr = ts.toTimeString().slice(0,5);
+    if (dateFrom && dateStr < dateFrom) return false;
+    if (dateTo   && dateStr > dateTo)   return false;
+    if (timeFrom && timeStr < timeFrom) return false;
+    if (timeTo   && timeStr > timeTo)   return false;
+    if (bot    && (d.name || d.phone) !== bot) return false;
+    if (status && d.status !== status)         return false;
+    return true;
+  });
+
+  const active = [dateFrom, dateTo, timeFrom, timeTo, bot, status].filter(Boolean).length;
+  document.getElementById('filter-badge').textContent = active ? `${FILTERED.length} de ${DATA.length} registros` : '';
+
+  render();
+}
+
+function clearFilters() {
+  ['f-date-from','f-date-to','f-time-from','f-time-to'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('f-bot').value = '';
+  document.getElementById('f-status').value = '';
+  applyFilters();
+}
+
+// ── Render ────────────────────────────────────────────────────────────────────
+function render() {
+  const D = FILTERED.length ? FILTERED : DATA;
+  if (!D || D.length === 0) return;
+  document.getElementById('empty-state').style.display = 'none';
+
+  const responded = D.filter(d => d.status === 'responded');
+  const times = responded.map(d => d.response_time_seconds).filter(v => v != null);
+  const avg = times.length ? (times.reduce((a,b)=>a+b,0)/times.length).toFixed(1) : '—';
+  const min = times.length ? Math.min(...times).toFixed(1) : '—';
+  const timeouts = D.filter(d => d.status === 'timeout').length;
+
+  const totalBots = new Set(D.map(d => d.name || d.phone)).size;
+  document.getElementById('k-ok').textContent    = responded.length;
+  document.getElementById('k-total').textContent = totalBots + ' bots';
+  document.getElementById('k-avg').textContent  = avg;
+  document.getElementById('k-min').textContent  = min;
+  document.getElementById('k-to').textContent   = timeouts;
+
+  renderBars(D);
+  renderLine(D);
+  renderScatter(D);
+  renderTable(D);
+}
+
+// ── Bar chart ─────────────────────────────────────────────────────────────────
+function renderBars(D) {
+  const el = document.getElementById('bar-chart');
+  el.innerHTML = '';
+  const groups = {};
+  D.forEach(d => {
+    const key = d.name || d.phone;
+    if (!groups[key]) groups[key] = { times: [], timeouts: 0, total: 0 };
+    groups[key].total++;
+    if (d.response_time_seconds != null) groups[key].times.push(d.response_time_seconds);
+    if (d.status === 'timeout') groups[key].timeouts++;
+  });
+  const bots = Object.entries(groups).map(([name, g]) => ({
+    name,
+    avg: g.times.length ? +(g.times.reduce((a,b)=>a+b,0)/g.times.length).toFixed(2) : null,
+    min: g.times.length ? Math.min(...g.times) : null,
+    max: g.times.length ? Math.max(...g.times) : null,
+    runs: g.total, timeouts: g.timeouts,
+    status: g.times.length > 0 ? 'responded' : 'timeout',
+  }));
+  const maxTime = Math.max(...bots.map(b => b.avg || 0), 1);
+  bots.forEach(b => {
+    const wrap = document.createElement('div'); wrap.className = 'bar-wrap';
+
+    const name = document.createElement('div'); name.className = 'bar-name'; name.textContent = b.name;
+
+    const track = document.createElement('div'); track.className = 'bar-track';
+    const fill = document.createElement('div'); fill.className = 'bar-fill ' + b.status;
+    const pct = b.avg ? Math.max((b.avg / maxTime) * 100, 2) : 2;
+    fill.style.width = pct + '%';
+    const tip = b.avg
+      ? `Prom: ${b.avg}s | Mín: ${b.min}s | Máx: ${b.max}s | Pruebas: ${b.runs}`
+      : `Sin respuesta (${b.runs})`;
+    fill.title = tip;
+    track.appendChild(fill);
+
+    const val = document.createElement('div'); val.className = 'bar-value';
+    val.textContent = b.avg ? b.avg + 's' : 'timeout';
+
+    wrap.appendChild(name); wrap.appendChild(track); wrap.appendChild(val);
+    el.appendChild(wrap);
+  });
+}
+
+// ── Line chart: promedio diario ───────────────────────────────────────────────
+function renderLine(D) {
+  const wrap = document.getElementById('line-chart-wrap');
+  const canvas = document.getElementById('line-canvas');
+  const xlabels = document.getElementById('lc-x-labels');
+
+  // Agrupar por fecha
+  const byDay = {};
+  D.forEach(d => {
+    if (!d.timestamp || d.response_time_seconds == null) return;
+    const day = d.timestamp.slice(0,10);
+    if (!byDay[day]) byDay[day] = [];
+    byDay[day].push(d.response_time_seconds);
+  });
+
+  const days = Object.keys(byDay).sort();
+  if (days.length === 0) { canvas.style.display = 'none'; xlabels.innerHTML = ''; return; }
+  canvas.style.display = 'block';
+
+  const avgs = days.map(day => +(byDay[day].reduce((a,b)=>a+b,0)/byDay[day].length).toFixed(2));
+  const W = canvas.offsetWidth || 700;
+  const H = 180;
+  canvas.width = W; canvas.height = H;
+
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0,0,W,H);
+
+  const pad = { top: 20, right: 20, bottom: 10, left: 0 };
+  const cW = W - pad.left - pad.right;
+  const cH = H - pad.top - pad.bottom;
+  const maxV = Math.max(...avgs, 1);
+  const minV = 0;
+
+  // Grid lines
+  const steps = 4;
+  for (let i = 0; i <= steps; i++) {
+    const v = (maxV / steps) * i;
+    const y = pad.top + cH - (v / maxV) * cH;
+    ctx.beginPath(); ctx.strokeStyle = '#1e2530'; ctx.lineWidth = 1;
+    ctx.moveTo(pad.left, y); ctx.lineTo(W - pad.right, y); ctx.stroke();
+    // Y label
+    const lbl = document.createElement('div'); lbl.className = 'lc-y-label';
+    lbl.style.top = y + 'px'; lbl.textContent = v.toFixed(1) + 's';
+    // remove old and add new
+  }
+
+  // Clear old y labels
+  wrap.querySelectorAll('.lc-y-label').forEach(e => e.remove());
+  for (let i = 0; i <= steps; i++) {
+    const v = (maxV / steps) * i;
+    const y = pad.top + cH - (v / maxV) * cH;
+    const lbl = document.createElement('div'); lbl.className = 'lc-y-label';
+    lbl.style.top = (y - 8) + 'px'; lbl.textContent = v.toFixed(1) + 's';
+    wrap.appendChild(lbl);
+  }
+
+  // Area fill
+  ctx.beginPath();
+  days.forEach((day, i) => {
+    const x = pad.left + (days.length > 1 ? (i / (days.length - 1)) * cW : cW / 2);
+    const y = pad.top + cH - ((avgs[i] - minV) / (maxV - minV || 1)) * cH;
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  });
+  const lastX = pad.left + cW; const firstX = pad.left;
+  ctx.lineTo(lastX, pad.top + cH); ctx.lineTo(firstX, pad.top + cH); ctx.closePath();
+  const grad = ctx.createLinearGradient(0, pad.top, 0, pad.top + cH);
+  grad.addColorStop(0, 'rgba(0,230,118,.25)'); grad.addColorStop(1, 'rgba(0,230,118,0)');
+  ctx.fillStyle = grad; ctx.fill();
+
+  // Line
+  ctx.beginPath(); ctx.strokeStyle = '#00e676'; ctx.lineWidth = 2; ctx.lineJoin = 'round';
+  days.forEach((day, i) => {
+    const x = pad.left + (days.length > 1 ? (i / (days.length - 1)) * cW : cW / 2);
+    const y = pad.top + cH - ((avgs[i] - minV) / (maxV - minV || 1)) * cH;
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  });
+  ctx.stroke();
+
+  // Dots + value labels
+  days.forEach((day, i) => {
+    const x = pad.left + (days.length > 1 ? (i / (days.length - 1)) * cW : cW / 2);
+    const y = pad.top + cH - ((avgs[i] - minV) / (maxV - minV || 1)) * cH;
+    ctx.beginPath(); ctx.arc(x, y, 4, 0, Math.PI * 2);
+    ctx.fillStyle = '#00e676'; ctx.fill();
+    ctx.fillStyle = '#e8eaf0'; ctx.font = '500 11px DM Mono, monospace';
+    ctx.textAlign = 'center'; ctx.fillText(avgs[i] + 's', x, y - 10);
+  });
+
+  // X labels
+  xlabels.innerHTML = days.map(d => `<span class="lc-x-label">${d.slice(5)}</span>`).join('');
+}
+
+// ── Scatter ───────────────────────────────────────────────────────────────────
+function renderScatter(D) {
+  const el = document.getElementById('scatter');
+  el.innerHTML = '';
+  const W = el.offsetWidth || 600; const H = 200;
+  el.style.height = H + 'px';
+  const maxTime = Math.max(...D.map(d => d.response_time_seconds || 0), 1);
+  const timestamps = D.map(d => new Date(d.timestamp).getTime()).filter(Boolean);
+  const minT = Math.min(...timestamps); const maxT = Math.max(...timestamps) || minT + 1;
+  [0, 30, 60, 90, 120].forEach(v => {
+    const lbl = document.createElement('div'); lbl.className = 'y-axis-label';
+    lbl.textContent = v + 's'; lbl.style.bottom = ((v / 120) * (H - 20)) + 'px'; lbl.style.left = '-28px';
+    el.appendChild(lbl);
+  });
+  D.forEach(d => {
+    if (!d.timestamp) return;
+    const t = new Date(d.timestamp).getTime();
+    const x = timestamps.length > 1 ? ((t - minT) / (maxT - minT)) * (W - 20) + 10 : W / 2;
+    const secs = d.response_time_seconds || 0;
+    const y = H - 10 - ((secs / 120) * (H - 20));
+    const dot = document.createElement('div'); dot.className = 'dot ' + (d.status || 'error');
+    dot.style.left = x + 'px'; dot.style.top = y + 'px';
+    dot.title = `${d.name || d.phone}\n${d.response_time_seconds ?? d.status}s\n${new Date(d.timestamp).toLocaleTimeString('es-CO')}`;
+    el.appendChild(dot);
+  });
+}
+
+// ── Table ─────────────────────────────────────────────────────────────────────
+function renderTable(D) {
+  const tbody = document.getElementById('tbl-body');
+  tbody.innerHTML = '';
+  [...D].reverse().forEach(d => {
+    const tr = document.createElement('tr');
+    const ts = d.timestamp ? new Date(d.timestamp).toLocaleString('es-CO') : '—';
+    tr.innerHTML = `
+      <td class="name">${esc(d.name||'—')}</td>
+      <td class="phone">${esc(d.phone)}</td>
+      <td class="time">${ts}</td>
+      <td style="color:var(--green);font-weight:700">${d.response_time_seconds!=null?d.response_time_seconds+'s':'—'}</td>
+      <td><span class="badge ${d.status}">${d.status||'error'}</span></td>
+      <td class="response" title="${esc(d.bot_response||d.error||'')}">${esc(d.bot_response||d.error||'—')}</td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+function esc(str) {
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── Demo data ─────────────────────────────────────────────────────────────────
+function loadDemo() {
+  const now = new Date();
+  const days = [-4,-3,-2,-1,0];
+  DATA = [];
+  const bots = [
+    {phone:'573001234567', name:'Bot Coopsana'},
+    {phone:'573009876543', name:'Bot HUN'},
+    {phone:'573001112233', name:'Bot Cedimed'},
+  ];
+  days.forEach(dOff => {
+    bots.forEach((b, i) => {
+      const ts = new Date(now - dOff * -86400000 - i * 60000);
+      DATA.push({ id: b.phone + '_' + dOff + '_' + i, ...b, message_sent:'Hola', timestamp: ts.toISOString(),
+        status:'responded', response_time_seconds: +(2 + Math.random()*10 + dOff*0.3).toFixed(2),
+        bot_response:'Hola, ¿en qué puedo ayudarte?', error: null });
+    });
+  });
+  populateBotFilter(); applyFilters(); updateTimestamp();
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+loadData();
+setTimeout(() => { if (!DATA.length) loadDemo(); }, 1000);
+setInterval(loadData, 30000);
+</script>
+</body>
+</html>

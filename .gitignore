@@ -1,0 +1,4 @@
+wa_session/
+agent.log
+__pycache__/
+*.pyc
