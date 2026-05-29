@@ -1560,5 +1560,192 @@
     "response_time_seconds": null,
     "bot_response": null,
     "error": "Sin respuesta en 120s"
+  },
+  {
+    "id": "573184444400_20260528_201757",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:17:57.667230",
+    "status": "timeout",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Sin respuesta en 120s"
+  },
+  {
+    "id": "573184444400_20260528_202707",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:27:07.727871",
+    "status": "responded",
+    "response_time_seconds": 1.03,
+    "bot_response": "Bienvenido  a Coopsana IPS , Al servicio de la salud de nuestros usuarios y el bienestar de todos.\n\n\n\nPor este medio podrá agendar sus citas o realizar trámites de la IPS.\n\n\n\nSi usted es usuario de:\n8:18 p. m.\nOpciones",
+    "error": null
+  },
+  {
+    "id": "573156704037_20260528_202720",
+    "phone": "573156704037",
+    "name": "Bot HUN",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:27:20.683044",
+    "status": "responded",
+    "response_time_seconds": 60.02,
+    "bot_response": "No puedo procesar esta respuesta, por favor responde a el mensaje anterior con alguna de sus opciones.\r\n\nEscribe \"Reiniciar\", si deseas volver al menú principal.\n8:27 p. m.",
+    "error": null
+  },
+  {
+    "id": "573167668245_20260528_202832",
+    "phone": "573167668245",
+    "name": "Bot Cedimed",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:28:32.822273",
+    "status": "responded",
+    "response_time_seconds": 5.08,
+    "bot_response": "Para nosotros es importante que sepas que todos tus datos serán tratados con la responsabilidad y transparencia que caracterizan a Diagnóstico Cedimed. Aquí puedes consultar nuestra política de tratamiento de datos: https://bit.ly/46ihhMN\n\n\n\n¿Acepta los términos para continuar?\n\nSí\nNo\n8:28 p. m.\nSi\nNo",
+    "error": null
+  },
+  {
+    "id": "573229471699_20260528_202850",
+    "phone": "573229471699",
+    "name": "Bot Messer",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:28:50.507494",
+    "status": "timeout",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Sin respuesta en 120s"
+  },
+  {
+    "id": "573132654242_20260528_203103",
+    "phone": "573132654242",
+    "name": "Bot Maple",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:31:03.198536",
+    "status": "responded",
+    "response_time_seconds": 5.33,
+    "bot_response": "Indica la IPS donde normalmente consultas ó en la que deseas ser atendido.\n\n\n\nElige una opción escribiendo el número..\n\n\n\n1- Maple Respiratory - Barranquilla\n\n2- Maple Respiratory - Bogotá\n\n3- Maple Respiratory - Bucaramanga\n\n4- Maple Respiratory - Cali\n\n5- Maple Respiratory - Cartagena\n\n6- Maple Respiratory - Ibagué\n\n7- Maple Respiratory - Manizales\n\n8- Maple Respiratory - Monteria\n\n9- Maple Respiratory - Pereira\n\n10- Maple Respiratory - Santa Marta\n\n11- Maple Respiratory - Sogamoso\n\n12- Maple ",
+    "error": null
+  },
+  {
+    "id": "573184444400_20260528_203716",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:37:16.844587",
+    "status": "responded",
+    "response_time_seconds": 1.03,
+    "bot_response": "No puedo procesar esa respuesta, podrías responder con cualquiera de las 15 respuestas posibles de la pregunta anterior.\n6:40 p. m.",
+    "error": null
+  },
+  {
+    "id": "573156704037_20260528_203734",
+    "phone": "573156704037",
+    "name": "Bot HUN",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:37:34.458917",
+    "status": "responded",
+    "response_time_seconds": 1.11,
+    "bot_response": "¡Qué pena contigo! No te entendí muy bien. ¿Me puedes repetir, por favor?\n7:00 p. m.",
+    "error": null
+  },
+  {
+    "id": "573167668245_20260528_203746",
+    "phone": "573167668245",
+    "name": "Bot Cedimed",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:37:46.158594",
+    "status": "responded",
+    "response_time_seconds": 1.03,
+    "bot_response": "Para nosotros es importante que sepas que todos tus datos serán tratados con la responsabilidad y transparencia que caracterizan a Diagnóstico Cedimed. Aquí puedes consultar nuestra política de tratamiento de datos: https://bit.ly/46ihhMN\n\n\n\n¿Acepta los términos para continuar?\n\nSí\nNo\n7:54 p. m.\nSi\nNo",
+    "error": null
+  },
+  {
+    "id": "573229471699_20260528_203758",
+    "phone": "573229471699",
+    "name": "Bot Messer",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:37:58.394172",
+    "status": "responded",
+    "response_time_seconds": 1.04,
+    "bot_response": "Vuelve a escribir desde la línea que quieres empezar la conversación de nuevo.\n6:01 p. m.",
+    "error": null
+  },
+  {
+    "id": "573132654242_20260528_203811",
+    "phone": "573132654242",
+    "name": "Bot Maple",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:38:11.353313",
+    "status": "responded",
+    "response_time_seconds": 1.1,
+    "bot_response": "Vuelve a escribir desde la línea que quieres empezar la conversación de nuevo.\n6:02 p. m.",
+    "error": null
+  },
+  {
+    "id": "573162413544_20260528_203823",
+    "phone": "573162413544",
+    "name": "Bot Clinicos Ips",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:38:23.442351",
+    "status": "responded",
+    "response_time_seconds": 1.1,
+    "bot_response": "Vuelve a escribir desde la línea que quieres empezar la conversación de nuevo.\n4:31 p. m.",
+    "error": null
+  },
+  {
+    "id": "573154704775_20260528_203836",
+    "phone": "573154704775",
+    "name": "Bot Clinica de la mujer",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:38:36.296801",
+    "status": "responded",
+    "response_time_seconds": 1.06,
+    "bot_response": "Terminos y condiciones:\n\n\n\nPara tu atención en Clínica de la Mujer, es necesario que cuentes con una autorización vigente para la fecha de la cita y que esté dirigida específicamente a esta institución. En caso de que la autorización haya vencido, deberás renovarla con tu EPS antes de la consulta. Si tu orden indica el pago de cuota moderadora o copago, este deberá realizarse el mismo día de la atención. Ten en cuenta que, si no cumples con estos requisitos, no será posible brindarte el servicio",
+    "error": null
+  },
+  {
+    "id": "573137826163_20260528_203847",
+    "phone": "573137826163",
+    "name": "Bot Guadalupe",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:38:47.896330",
+    "status": "responded",
+    "response_time_seconds": 1.08,
+    "bot_response": "No puedo procesar esa respuesta, podrías responder con cualquiera de las 15 respuestas posibles de la pregunta anterior.\n4:32 p. m.",
+    "error": null
+  },
+  {
+    "id": "573124139143_20260528_203900",
+    "phone": "573124139143",
+    "name": "Bot Organizacion Vid Salud Vid",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:39:00.672452",
+    "status": "responded",
+    "response_time_seconds": 1.12,
+    "bot_response": "Lo siento, este servicio ha sido desactivado, comunícate con el call center.\n1:47 p. m.",
+    "error": null
+  },
+  {
+    "id": "573214989585_20260528_203912",
+    "phone": "573214989585",
+    "name": "Bot Villavicencio",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:39:12.559923",
+    "status": "responded",
+    "response_time_seconds": 1.02,
+    "bot_response": "No puedo procesar esa respuesta, podrías responder con cualquiera de las 15 respuestas posibles de la pregunta anterior.\n4:32 p. m.",
+    "error": null
+  },
+  {
+    "id": "573224575712_20260528_203924",
+    "phone": "573224575712",
+    "name": "Bot UPB",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:39:24.221630",
+    "status": "timeout",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Sin respuesta en 120s"
   }
 ]
