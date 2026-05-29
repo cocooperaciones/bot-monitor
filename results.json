@@ -1868,5 +1868,126 @@
     "response_time_seconds": null,
     "bot_response": null,
     "error": "Sin respuesta en 120s"
+  },
+  {
+    "id": "573184444400_20260529_070021",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-29T07:00:21.038664",
+    "status": "responded",
+    "response_time_seconds": 1.17,
+    "bot_response": "No puedo procesar esa respuesta, podrías responder con cualquiera de las 15 respuestas posibles de la pregunta anterior.\n6:45 p. m.",
+    "error": null
+  },
+  {
+    "id": "573156704037_20260529_070038",
+    "phone": "573156704037",
+    "name": "Bot HUN",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-29T07:00:38.853761",
+    "status": "responded",
+    "response_time_seconds": 8.38,
+    "bot_response": "¡Qué pena contigo! No te entendí muy bien. ¿Me puedes repetir, por favor?\n8:37 p. m.",
+    "error": null
+  },
+  {
+    "id": "573167668245_20260529_070112",
+    "phone": "573167668245",
+    "name": "Bot Cedimed",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-29T07:01:12.741103",
+    "status": "responded",
+    "response_time_seconds": 1.16,
+    "bot_response": "¡Qué pena! No te entendí bien. ¿Me puedes repetir, por favor?\n7:00 p. m.",
+    "error": null
+  },
+  {
+    "id": "573229471699_20260529_070129",
+    "phone": "573229471699",
+    "name": "Bot Messer",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-29T07:01:29.277680",
+    "status": "responded",
+    "response_time_seconds": 1.1,
+    "bot_response": "No puedo procesar esa respuesta, podrías responder con cualquiera de las 15 respuestas posibles de la pregunta anterior.\n6:41 p. m.",
+    "error": null
+  },
+  {
+    "id": "573132654242_20260529_070143",
+    "phone": "573132654242",
+    "name": "Bot Maple",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-29T07:01:43.221158",
+    "status": "responded",
+    "response_time_seconds": 1.01,
+    "bot_response": "Indica la IPS donde normalmente consultas ó en la que deseas ser atendido.\n\n\n\nElige una opción escribiendo el número..\n\n\n\n1- Maple Respiratory - Barranquilla\n\n2- Maple Respiratory - Bogotá\n\n3- Maple Respiratory - Bucaramanga\n\n4- Maple Respiratory - Cali\n\n5- Maple Respiratory - Cartagena\n\n6- Maple Respiratory - Ibagué\n\n7- Maple Respiratory - Manizales\n\n8- Maple Respiratory - Monteria\n\n9- Maple Respiratory - Pereira\n\n10- Maple Respiratory - Santa Marta\n\n11- Maple Respiratory - Sogamoso\n\n12- Maple ",
+    "error": null
+  },
+  {
+    "id": "573162413544_20260529_070154",
+    "phone": "573162413544",
+    "name": "Bot Clinicos Ips",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-29T07:01:54.536950",
+    "status": "responded",
+    "response_time_seconds": 1.03,
+    "bot_response": "No puedo procesar esa respuesta, podrías responder con cualquiera de las 15 respuestas posibles de la pregunta anterior.\n6:37 p. m.",
+    "error": null
+  },
+  {
+    "id": "573154704775_20260529_070206",
+    "phone": "573154704775",
+    "name": "Bot Clinica de la mujer",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-29T07:02:06.607418",
+    "status": "responded",
+    "response_time_seconds": 1.01,
+    "bot_response": "Discúlpame, no entendí muy bien. ¿Me puedes repetir por favor?\n8:38 p. m.",
+    "error": null
+  },
+  {
+    "id": "573137826163_20260529_070218",
+    "phone": "573137826163",
+    "name": "Bot Guadalupe",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-29T07:02:18.301433",
+    "status": "responded",
+    "response_time_seconds": 1.06,
+    "bot_response": "No puedo procesar esa respuesta, podrías responder con cualquiera de las 15 respuestas posibles de la pregunta anterior.\n4:32 p. m.",
+    "error": null
+  },
+  {
+    "id": "573124139143_20260529_070230",
+    "phone": "573124139143",
+    "name": "Bot Organizacion Vid Salud Vid",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-29T07:02:30.965257",
+    "status": "responded",
+    "response_time_seconds": 1.03,
+    "bot_response": "No puedo procesar esa respuesta, podrías responder con cualquiera de las 15 respuestas posibles de la pregunta anterior.\n4:32 p. m.",
+    "error": null
+  },
+  {
+    "id": "573214989585_20260529_070242",
+    "phone": "573214989585",
+    "name": "Bot Villavicencio",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-29T07:02:42.859564",
+    "status": "responded",
+    "response_time_seconds": 1.02,
+    "bot_response": "No puedo procesar esa respuesta, podrías responder con cualquiera de las 15 respuestas posibles de la pregunta anterior.\n6:04 p. m.",
+    "error": null
+  },
+  {
+    "id": "573224575712_20260529_070254",
+    "phone": "573224575712",
+    "name": "Bot UPB",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-29T07:02:54.814684",
+    "status": "timeout",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Sin respuesta en 120s"
   }
 ]
