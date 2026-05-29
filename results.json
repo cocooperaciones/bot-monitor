@@ -1395,5 +1395,170 @@
     "response_time_seconds": null,
     "bot_response": null,
     "error": "No se encontro el input del chat."
+  },
+  {
+    "id": "573184444400_20260528_195207",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T19:52:07.325781",
+    "status": "timeout",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Sin respuesta en 120s"
+  },
+  {
+    "id": "573156704037_20260528_195422",
+    "phone": "573156704037",
+    "name": "Bot HUN",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T19:54:22.545901",
+    "status": "responded",
+    "response_time_seconds": 6.07,
+    "bot_response": "Términos y condiciones\n\n\n\nLa autorización debe estar vigente y dirigida al Hospital Universitario Nacional de Colombia o Corporación Salud UN. Si incluye copago o cuota moderadora, debes pagarlo el día de la cita.\n\n\n\nSi no cumples estos requisitos, no se realizará la atención.\n\n\n\nMenores de 18 años no pueden ser atendidos en el HUN.\n\n\n\nAl continuar, aceptas los términos de WhatsApp y el uso de tu información en este medio: https://www.whatsapp.com/legal\n\n\n\n¿Aceptas los términos para continuar?\n7",
+    "error": null
+  },
+  {
+    "id": "573167668245_20260528_195438",
+    "phone": "573167668245",
+    "name": "Bot Cedimed",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T19:54:38.108694",
+    "status": "responded",
+    "response_time_seconds": 2.03,
+    "bot_response": "Hola\n7:54 p. m.",
+    "error": null
+  },
+  {
+    "id": "573229471699_20260528_195449",
+    "phone": "573229471699",
+    "name": "Bot Messer",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T19:54:49.857055",
+    "status": "responded",
+    "response_time_seconds": 2.06,
+    "bot_response": "Hola\n7:54 p. m.",
+    "error": null
+  },
+  {
+    "id": "573184444400_20260528_195552",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T19:55:52.788444",
+    "status": "timeout",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Sin respuesta en 120s"
+  },
+  {
+    "id": "573156704037_20260528_195805",
+    "phone": "573156704037",
+    "name": "Bot HUN",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T19:58:05.717336",
+    "status": "timeout",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Sin respuesta en 120s"
+  },
+  {
+    "id": "573167668245_20260528_200016",
+    "phone": "573167668245",
+    "name": "Bot Cedimed",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:00:16.269288",
+    "status": "responded",
+    "response_time_seconds": 1.03,
+    "bot_response": "Para nosotros es importante que sepas que todos tus datos serán tratados con la responsabilidad y transparencia que caracterizan a Diagnóstico Cedimed. Aquí puedes consultar nuestra política de tratamiento de datos: https://bit.ly/46ihhMN\n\n\n\n¿Acepta los términos para continuar?\n\nSí\nNo\n7:54 p. m.\nSi\nNo",
+    "error": null
+  },
+  {
+    "id": "573229471699_20260528_200026",
+    "phone": "573229471699",
+    "name": "Bot Messer",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:00:26.458423",
+    "status": "timeout",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Sin respuesta en 120s"
+  },
+  {
+    "id": "573132654242_20260528_200236",
+    "phone": "573132654242",
+    "name": "Bot Maple",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:02:36.816289",
+    "status": "responded",
+    "response_time_seconds": 1.04,
+    "bot_response": "Vuelve a escribir desde la línea que quieres empezar la conversación de nuevo.\n7:07 p. m.",
+    "error": null
+  },
+  {
+    "id": "573162413544_20260528_200246",
+    "phone": "573162413544",
+    "name": "Bot Clinicos Ips",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:02:46.108012",
+    "status": "timeout",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Sin respuesta en 120s"
+  },
+  {
+    "id": "573154704775_20260528_200457",
+    "phone": "573154704775",
+    "name": "Bot Clinica de la mujer",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:04:57.375288",
+    "status": "responded",
+    "response_time_seconds": 7.18,
+    "bot_response": "Terminos y condiciones:\n\n\n\nPara tu atención en Clínica de la Mujer, es necesario que cuentes con una autorización vigente para la fecha de la cita y que esté dirigida específicamente a esta institución. En caso de que la autorización haya vencido, deberás renovarla con tu EPS antes de la consulta. Si tu orden indica el pago de cuota moderadora o copago, este deberá realizarse el mismo día de la atención. Ten en cuenta que, si no cumples con estos requisitos, no será posible brindarte el servicio",
+    "error": null
+  },
+  {
+    "id": "573137826163_20260528_200516",
+    "phone": "573137826163",
+    "name": "Bot Guadalupe",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:05:16.960414",
+    "status": "responded",
+    "response_time_seconds": 4.19,
+    "bot_response": "Hola, bienvenido a Clínica Guadalupe, mi nombre es Lupe.  Y te guiaré en este proceso.\n\n \n\n Por favor, indícame tu número de identificación sin puntos, guiones ni signos especiales (solo números).\n8:05 p. m.",
+    "error": null
+  },
+  {
+    "id": "573124139143_20260528_200529",
+    "phone": "573124139143",
+    "name": "Bot Organizacion Vid Salud Vid",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:05:29.758933",
+    "status": "responded",
+    "response_time_seconds": 4.11,
+    "bot_response": "Lo siento, este servicio ha sido desactivado, comunícate con el call center.\n8:05 p. m.",
+    "error": null
+  },
+  {
+    "id": "573214989585_20260528_200542",
+    "phone": "573214989585",
+    "name": "Bot Villavicencio",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:05:42.157574",
+    "status": "responded",
+    "response_time_seconds": 1.04,
+    "bot_response": "Vuelve a escribir desde la línea que quieres empezar la conversación de nuevo.\n7:09 p. m.",
+    "error": null
+  },
+  {
+    "id": "573224575712_20260528_200552",
+    "phone": "573224575712",
+    "name": "Bot UPB",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-28T20:05:52.733465",
+    "status": "timeout",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Sin respuesta en 120s"
   }
 ]
