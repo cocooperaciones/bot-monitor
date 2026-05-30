@@ -2594,5 +2594,126 @@
     "response_time_seconds": 1.04,
     "bot_response": "No puedo procesar esa respuesta, podrías responder con cualquiera de las 15 respuestas posibles de la pregunta anterior.\n11:04 a. m.",
     "error": null
+  },
+  {
+    "id": "573184444400_20260530_110016",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-30T11:00:16.133774",
+    "status": "responded",
+    "response_time_seconds": 4.08,
+    "bot_response": "Vuelve a escribir desde la línea que quieres empezar la conversación de nuevo.\n7:53 p. m.",
+    "error": null
+  },
+  {
+    "id": "573156704037_20260530_110036",
+    "phone": "573156704037",
+    "name": "Bot HUN",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-30T11:00:36.829893",
+    "status": "responded",
+    "response_time_seconds": 1.02,
+    "bot_response": "¡Hola! Bienvenido a Hospital Universitario Nacional de Colombia\n3:01 p. m.",
+    "error": null
+  },
+  {
+    "id": "573167668245_20260530_110049",
+    "phone": "573167668245",
+    "name": "Bot Cedimed",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-30T11:00:49.969161",
+    "status": "responded",
+    "response_time_seconds": 1.02,
+    "bot_response": "Se nos terminó el tiempo de espera. Para poder ayudarle bien, ¡empecemos de nuevo!\n7:00 a. m.",
+    "error": null
+  },
+  {
+    "id": "573229471699_20260530_110103",
+    "phone": "573229471699",
+    "name": "Bot Messer",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-30T11:01:03.441464",
+    "status": "responded",
+    "response_time_seconds": 2.07,
+    "bot_response": "Lo siento, este servicio ha sido desactivado, comunícate con el call center.\n8:38 p. m.",
+    "error": null
+  },
+  {
+    "id": "573132654242_20260530_110143",
+    "phone": "573132654242",
+    "name": "Bot Maple",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-30T11:01:43.744244",
+    "status": "responded",
+    "response_time_seconds": 1.07,
+    "bot_response": "Indica la IPS donde normalmente consultas ó en la que deseas ser atendido.\n\n\n\nElige una opción escribiendo el número..\n\n\n\n1- Maple Respiratory - Barranquilla\n\n2- Maple Respiratory - Bogotá\n\n3- Maple Respiratory - Bucaramanga\n\n4- Maple Respiratory - Cali\n\n5- Maple Respiratory - Cartagena\n\n6- Maple Respiratory - Ibagué\n\n7- Maple Respiratory - Manizales\n\n8- Maple Respiratory - Monteria\n\n9- Maple Respiratory - Pereira\n\n10- Maple Respiratory - Santa Marta\n\n11- Maple Respiratory - Sogamoso\n\n12- Maple ",
+    "error": null
+  },
+  {
+    "id": "573162413544_20260530_110211",
+    "phone": "573162413544",
+    "name": "Bot Clinicos Ips",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-30T11:02:11.410384",
+    "status": "responded",
+    "response_time_seconds": 1.03,
+    "bot_response": "Hola, bienvenido a Clínicos IPS, soy Gabi. \r\n\n\r\n\nRecuerda que para asegurar tu cita, es importante confirmar los datos y recibir el mensaje de 'Cita reservada con éxito'. Así garantizamos tu atención médica sin inconvenientes.\r\n\n \r\n\n indícanos por favor cuál es tu número de identificación.\n7:08 p. m.",
+    "error": null
+  },
+  {
+    "id": "573154704775_20260530_110229",
+    "phone": "573154704775",
+    "name": "Bot Clinica de la mujer",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-30T11:02:29.820479",
+    "status": "responded",
+    "response_time_seconds": 1.03,
+    "bot_response": "Se nos terminó el tiempo de espera. Para poder ayudarle bien, ¡empecemos de nuevo!\n7:01 a. m.",
+    "error": null
+  },
+  {
+    "id": "573137826163_20260530_110244",
+    "phone": "573137826163",
+    "name": "Bot Guadalupe",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-30T11:02:44.876283",
+    "status": "responded",
+    "response_time_seconds": 1.04,
+    "bot_response": "No puedo procesar esa respuesta, podrías responder con cualquiera de las 15 respuestas posibles de la pregunta anterior.\n6:53 p. m.",
+    "error": null
+  },
+  {
+    "id": "573124139143_20260530_110259",
+    "phone": "573124139143",
+    "name": "Bot Organizacion Vid Salud Vid",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-30T11:02:59.781050",
+    "status": "responded",
+    "response_time_seconds": 1.04,
+    "bot_response": "No puedo procesar esa respuesta, podrías responder con cualquiera de las 15 respuestas posibles de la pregunta anterior.\n7:02 p. m.",
+    "error": null
+  },
+  {
+    "id": "573214989585_20260530_110312",
+    "phone": "573214989585",
+    "name": "Bot Villavicencio",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-30T11:03:12.198633",
+    "status": "responded",
+    "response_time_seconds": 1.03,
+    "bot_response": "Vuelve a escribir desde la línea que quieres empezar la conversación de nuevo.\n7:02 p. m.",
+    "error": null
+  },
+  {
+    "id": "573224575712_20260530_110325",
+    "phone": "573224575712",
+    "name": "Bot UPB",
+    "message_sent": "Hola",
+    "timestamp": "2026-05-30T11:03:25.295878",
+    "status": "responded",
+    "response_time_seconds": 1.02,
+    "bot_response": "No puedo procesar esa respuesta, podrías responder con cualquiera de las 15 respuestas posibles de la pregunta anterior.\n11:04 a. m.",
+    "error": null
   }
 ]
