@@ -3562,5 +3562,126 @@
     "response_time_seconds": 1.12,
     "bot_response": "Hola, soy Anita, tu asistente virtual, gracias por ponerte en contacto con la Clínica Universitaria Bolivariana.\r\n\n \r\n\nImportante \r\n\nSi presentas alguna inquietud con tus citas, comunícate con un asesor llamando al (604) 3220023.\r\n\nTen en cuenta: para citas de primera vez por SOAT (independientemente de la Especialidad), debes acercarte de manera presencial a la Clínica Universitaria Bolivariana, en la Oficina de SOAT, primer piso, donde te darán las indicaciones para continuar con tu trámite.\r\n",
     "error": null
+  },
+  {
+    "id": "573184444400_20260601_150018",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-01T15:00:18.922998",
+    "status": "responded",
+    "response_time_seconds": 1.08,
+    "bot_response": "No puedo procesar esa respuesta, podrías responder con cualquiera de las 15 respuestas posibles de la pregunta anterior.\n7:52 p. m.",
+    "error": null
+  },
+  {
+    "id": "573156704037_20260601_150035",
+    "phone": "573156704037",
+    "name": "Bot HUN",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-01T15:00:35.638378",
+    "status": "responded",
+    "response_time_seconds": 1.02,
+    "bot_response": "¡Hola! Bienvenido a Hospital Universitario Nacional de Colombia\n3:00 p. m.",
+    "error": null
+  },
+  {
+    "id": "573167668245_20260601_150048",
+    "phone": "573167668245",
+    "name": "Bot Cedimed",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-01T15:00:48.101233",
+    "status": "responded",
+    "response_time_seconds": 1.01,
+    "bot_response": "Hola, bienvenido a Diagnóstico CEDIMED, soy  CeCi, tu asistente virtual y estoy aquí para acompañarte en el agendamiento de tus servicios.\n7:01 a. m.",
+    "error": null
+  },
+  {
+    "id": "573229471699_20260601_150103",
+    "phone": "573229471699",
+    "name": "Bot Messer",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-01T15:01:03.133577",
+    "status": "responded",
+    "response_time_seconds": 1.02,
+    "bot_response": "¡Hola! soy Maria, tu asistente virtual de Messer Colombia, te damos la bienvenida a nuestro canal de WhatsApp.  te ayudaré a agendar y/o gestionar tus citas. \r\n\n \r\n\n Por favor digita el número de identificación del paciente, sin signos de puntuación.\n3:01 p. m.",
+    "error": null
+  },
+  {
+    "id": "573132654242_20260601_150116",
+    "phone": "573132654242",
+    "name": "Bot Maple",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-01T15:01:16.017668",
+    "status": "responded",
+    "response_time_seconds": 1.02,
+    "bot_response": "Indica la IPS donde normalmente consultas ó en la que deseas ser atendido.\n\n\n\nElige una opción escribiendo el número..\n\n\n\n1- Maple Respiratory - Barranquilla\n\n2- Maple Respiratory - Bogotá\n\n3- Maple Respiratory - Bucaramanga\n\n4- Maple Respiratory - Cali\n\n5- Maple Respiratory - Cartagena\n\n6- Maple Respiratory - Ibagué\n\n7- Maple Respiratory - Manizales\n\n8- Maple Respiratory - Monteria\n\n9- Maple Respiratory - Pereira\n\n10- Maple Respiratory - Santa Marta\n\n11- Maple Respiratory - Sogamoso\n\n12- Maple ",
+    "error": null
+  },
+  {
+    "id": "573162413544_20260601_150127",
+    "phone": "573162413544",
+    "name": "Bot Clinicos Ips",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-01T15:01:27.682825",
+    "status": "responded",
+    "response_time_seconds": 1.1,
+    "bot_response": "No puedo procesar esa respuesta, podrías responder con cualquiera de las 15 respuestas posibles de la pregunta anterior.\n3:01 p. m.",
+    "error": null
+  },
+  {
+    "id": "573154704775_20260601_150142",
+    "phone": "573154704775",
+    "name": "Bot Clinica de la mujer",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-01T15:01:42.502504",
+    "status": "responded",
+    "response_time_seconds": 1.03,
+    "bot_response": "Se nos terminó el tiempo de espera. Para poder ayudarle bien, ¡empecemos de nuevo!\n6:01 p. m.",
+    "error": null
+  },
+  {
+    "id": "573137826163_20260601_150154",
+    "phone": "573137826163",
+    "name": "Bot Guadalupe",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-01T15:01:54.462631",
+    "status": "responded",
+    "response_time_seconds": 1.03,
+    "bot_response": "Hola, bienvenido a Clínica Guadalupe, mi nombre es Lupe.  Y te guiaré en este proceso.\n\n \n\n Por favor, indícame tu número de identificación sin puntos, guiones ni signos especiales (solo números).\n8:39 p. m.",
+    "error": null
+  },
+  {
+    "id": "573124139143_20260601_150209",
+    "phone": "573124139143",
+    "name": "Bot Organizacion Vid Salud Vid",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-01T15:02:09.047295",
+    "status": "responded",
+    "response_time_seconds": 1.02,
+    "bot_response": "Hola, \r\n\nBienvenido(a) soy DaVID, desde este momento seré tu guía para la autogestión de tu cita.\r\n\n\r\n\nIndícanos tu número de identificación:\n9:02 a. m.",
+    "error": null
+  },
+  {
+    "id": "573214989585_20260601_150224",
+    "phone": "573214989585",
+    "name": "Bot Villavicencio",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-01T15:02:24.073753",
+    "status": "responded",
+    "response_time_seconds": 1.02,
+    "bot_response": "No puedo procesar esa respuesta, podrías responder con cualquiera de las 15 respuestas posibles de la pregunta anterior.\n3:03 p. m.",
+    "error": null
+  },
+  {
+    "id": "573224575712_20260601_150238",
+    "phone": "573224575712",
+    "name": "Bot UPB",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-01T15:02:38.929400",
+    "status": "responded",
+    "response_time_seconds": 1.04,
+    "bot_response": "Lo siento, este servicio ha sido desactivado, comunícate con el call center.\n3:02 p. m.",
+    "error": null
   }
 ]
