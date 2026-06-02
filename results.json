@@ -4530,5 +4530,16 @@
     "response_time_seconds": 3.1,
     "bot_response": "Hola, \r\n\nBienvenido(a) soy DaVID, desde este momento seré tu guía para la autogestión de tu cita.\r\n\n\r\n\nIndícanos tu número de identificación:\n7:02 a. m.",
     "error": null
+  },
+  {
+    "id": "573184444400_20260602_185224",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-02T18:52:24.302930",
+    "status": "responded",
+    "response_time_seconds": 5.11,
+    "bot_response": "No puedo procesar esa respuesta, podrías responder con cualquiera de las 15 respuestas posibles de la pregunta anterior.\n6:52 p. m.",
+    "error": null
   }
 ]
