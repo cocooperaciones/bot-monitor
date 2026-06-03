@@ -4552,5 +4552,16 @@
     "response_time_seconds": null,
     "bot_response": null,
     "error": "Sin respuesta en 120s"
+  },
+  {
+    "id": "573184444400_20260603_071319",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-03T07:13:19.759497",
+    "status": "responded",
+    "response_time_seconds": 5.23,
+    "bot_response": "No puedo procesar esta respuesta, por favor responde a el mensaje anterior con alguna de sus opciones.\r\n\nEscribe \"Reiniciar\", si deseas volver al menú principal.\n7:13 a. m.",
+    "error": null
   }
 ]
