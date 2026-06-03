@@ -4816,5 +4816,16 @@
     "response_time_seconds": 120.74,
     "bot_response": "Bienvenido  a Coopsana IPS , al servicio de la salud de nuestros usuarios y el bienestar de todos.\r\n\n\r\n\nSeñor usuario.  Le informamos que nuestro servicio de toma de muestras de laboratorio clínico ubicado en la sede Coopsana Centro se ha trasladado a la sede Coopsana Avenida Oriental    ubicada en la Carrera 46 # 57 – 10 Int. 301  . ¡Te esperamos en la sede Av. Oriental para continuar con tu atención!  \r\n\n\r\n\nPara solicitudes de autorizaciones (fórmulas de medicamentos, exámenes de laboratorios,",
     "error": null
+  },
+  {
+    "id": "573184444400_20260603_170723",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-03T17:07:23.977461",
+    "status": "responded",
+    "response_time_seconds": 3.08,
+    "bot_response": "Hola\n5:07 p. m.",
+    "error": null
   }
 ]
