@@ -4684,5 +4684,16 @@
     "response_time_seconds": 5.96,
     "bot_response": "Lo siento, este servicio ha sido desactivado, comunícate con el call center.\n9:15 a. m.",
     "error": null
+  },
+  {
+    "id": "573184444400_20260603_104017",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-03T10:40:17.495365",
+    "status": "responded",
+    "response_time_seconds": 120.55,
+    "bot_response": "Indica la IPS donde normalmente consultas ó en la que deseas ser atendido.\n\n\n\nElige una opción escribiendo el número..\n\n\n\n1- Coopsana Particular\n\n2- COOPSANA - Cápita\n\n3- Coopsana Centro de Especialistas\n10:40 a. m.",
+    "error": null
   }
 ]
