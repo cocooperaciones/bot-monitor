@@ -4541,5 +4541,16 @@
     "response_time_seconds": 5.11,
     "bot_response": "No puedo procesar esa respuesta, podrías responder con cualquiera de las 15 respuestas posibles de la pregunta anterior.\n6:52 p. m.",
     "error": null
+  },
+  {
+    "id": "573184444400_20260603_070029",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-03T07:00:29.039731",
+    "status": "timeout",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Sin respuesta en 120s"
   }
 ]
