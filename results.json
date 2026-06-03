@@ -4827,5 +4827,60 @@
     "response_time_seconds": 3.08,
     "bot_response": "Hola\n5:07 p. m.",
     "error": null
+  },
+  {
+    "id": "573184444400_20260603_180017",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-03T18:00:17.898448",
+    "status": "responded",
+    "response_time_seconds": 121.0,
+    "bot_response": "Bienvenido  a Coopsana IPS , Al servicio de la salud de nuestros usuarios y el bienestar de todos.\n\n\n\nPor este medio podrá agendar sus citas o realizar trámites de la IPS.\n\n\n\nSi usted es usuario de:\n10:32 a. m.\nOpciones",
+    "error": null
+  },
+  {
+    "id": "573156704037_20260603_180238",
+    "phone": "573156704037",
+    "name": "Bot HUN",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-03T18:02:38.115522",
+    "status": "timeout",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Sin respuesta en 120s"
+  },
+  {
+    "id": "573167668245_20260603_180455",
+    "phone": "573167668245",
+    "name": "Bot Cedimed",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-03T18:04:55.690536",
+    "status": "timeout",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Sin respuesta en 120s"
+  },
+  {
+    "id": "573229471699_20260603_180713",
+    "phone": "573229471699",
+    "name": "Bot Messer",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-03T18:07:13.057532",
+    "status": "timeout",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Sin respuesta en 120s"
+  },
+  {
+    "id": "573132654242_20260603_180937",
+    "phone": "573132654242",
+    "name": "Bot Maple",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-03T18:09:37.201954",
+    "status": "responded",
+    "response_time_seconds": 120.11,
+    "bot_response": "Se nos terminó el tiempo de espera. Para poder ayudarle bien, ¡empecemos de nuevo!\n6:03 p. m.",
+    "error": null
   }
 ]
