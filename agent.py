@@ -1,7 +1,6 @@
 """
-WhatsApp Response Time Agent - Secuencial optimizado
-Una sola ventana, un chat a la vez.
-Envia Hola, espera respuesta, si responde sigue, si no en 2 min reporta timeout y sigue.
+WhatsApp Response Time Agent
+Envia Hola, mide tiempo de respuesta, alerta Discord si no responde en 2 min.
 """
 
 import argparse
@@ -10,6 +9,7 @@ import json
 import logging
 import time
 import urllib.request
+import subprocess
 from datetime import datetime
 from pathlib import Path
 
@@ -56,7 +56,6 @@ def build_wa_url(phone):
 
 
 def send_discord_alert(name, phone, error):
-    import subprocess
     message = {
         "embeds": [{
             "title": "Bot sin respuesta",
@@ -101,55 +100,51 @@ async def probe_bot(page, phone, name, message):
             send_discord_alert(name, phone, result["error"])
             return result
 
-        # Esperar que carguen mensajes previos
-        await asyncio.sleep(3)
-
-        # Guardar texto del ultimo mensaje antes de enviar
-        prev_msgs = await page.query_selector_all('div.message-in')
-        before_count = len(prev_msgs)
-        last_text_before = ""
-        if prev_msgs:
-            last_text_before = await prev_msgs[-1].inner_text()
-
-        # Enviar mensaje UNA sola vez
+        # Enviar mensaje
         await page.click(input_sel)
         await page.type(input_sel, message, delay=60)
         await page.keyboard.press("Enter")
         send_time = time.monotonic()
         log.info(f"[{name}] Mensaje enviado. Esperando respuesta (max {MAX_WAIT_SECONDS}s)...")
 
-        # Esperar respuesta - sale apenas detecta cambio
+        # Esperar 2s antes de detectar
+        await asyncio.sleep(2)
+
+        # Detectar respuesta
         deadline  = time.monotonic() + MAX_WAIT_SECONDS
         responded = False
         while time.monotonic() < deadline:
             await asyncio.sleep(POLL_INTERVAL)
-            current_msgs = await page.query_selector_all('div.message-in')
-            if len(current_msgs) > before_count:
-                elapsed  = time.monotonic() - send_time
-                bot_text = await current_msgs[before_count].inner_text()
-                result.update(
-                    status="responded",
-                    response_time_seconds=round(elapsed, 2),
-                    bot_response=bot_text.strip()[:500],
-                )
-                log.info(f"[{name}] Respondio en {elapsed:.1f}s")
-                responded = True
+            try:
+                msgs = await page.query_selector_all('[data-testid="msg-container"]')
+                for msg in reversed(msgs):
+                    # Saltar mensajes enviados por nosotros
+                    is_sent = await msg.query_selector('[data-testid="msg-dblcheck"]')
+                    if is_sent:
+                        continue
+                    # Verificar que tiene meta (es mensaje del bot)
+                    meta = await msg.query_selector('[data-testid="msg-meta"]')
+                    if not meta:
+                        continue
+                    elapsed = time.monotonic() - send_time
+                    # Ignorar mensajes previos al envio
+                    if elapsed < 1.5:
+                        continue
+                    bot_text = await msg.inner_text()
+                    if not bot_text.strip():
+                        continue
+                    result.update(
+                        status="responded",
+                        response_time_seconds=round(elapsed, 2),
+                        bot_response=bot_text.strip()[:500],
+                    )
+                    log.info(f"[{name}] Respondio en {elapsed:.1f}s")
+                    responded = True
+                    break
+            except Exception as ex:
+                log.debug(f"[{name}] Error en deteccion: {ex}")
+            if responded:
                 break
-            # Tambien detectar si el ultimo mensaje cambio (bots que editan su respuesta)
-            if prev_msgs:
-                current_last = await page.query_selector('div.message-in:last-child')
-                if current_last:
-                    current_text = await current_last.inner_text()
-                    if current_text != last_text_before:
-                        elapsed  = time.monotonic() - send_time
-                        result.update(
-                            status="responded",
-                            response_time_seconds=round(elapsed, 2),
-                            bot_response=current_text.strip()[:500],
-                        )
-                        log.info(f"[{name}] Respondio en {elapsed:.1f}s")
-                        responded = True
-                        break
 
         if not responded:
             result["status"] = "timeout"
@@ -157,7 +152,7 @@ async def probe_bot(page, phone, name, message):
             log.warning(f"[{name}] TIMEOUT - enviando alerta a Discord")
             send_discord_alert(name, phone, result["error"])
 
-        # Volver al inicio para el siguiente bot
+        # Volver al inicio
         await page.goto("https://web.whatsapp.com", timeout=30_000)
 
     except Exception as exc:
@@ -177,7 +172,6 @@ async def run_probes(contacts):
             args=["--start-maximized"],
             no_viewport=True,
         )
-
         page = await browser.new_page()
         await page.goto("https://web.whatsapp.com", timeout=60_000)
         log.info("Esperando WhatsApp Web...")
@@ -202,7 +196,6 @@ async def run_probes(contacts):
         await browser.close()
         log.info("Todas las pruebas completadas.")
 
-        import subprocess
         subprocess.run(
             ["bash", "/Users/coconataliacorrea/whatsapp-agent/push_results.sh"],
             capture_output=True
@@ -246,9 +239,10 @@ if __name__ == "__main__":
         exit(1)
 
     if args.run_now:
-        df       = pd.read_csv(csv_path, dtype=str, encoding="latin-1")
+        df = pd.read_csv(csv_path, dtype=str, encoding="latin-1")
+        df = df.drop_duplicates(subset=["phone"])
         contacts = df.to_dict("records")
-        log.info(f"Ejecutando {len(contacts)} prueba(s) ahora...")
+        log.info(f"Ejecutando {len(contacts)} prueba(s) ahora (una por bot)...")
         asyncio.run(run_probes(contacts))
     else:
         schedule_from_csv(str(csv_path))
