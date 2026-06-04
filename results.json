@@ -5245,5 +5245,126 @@
     "response_time_seconds": 6.1,
     "bot_response": "Hola\n11:07 a. m.",
     "error": null
+  },
+  {
+    "id": "573184444400_20260604_150038",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T15:00:38.566637",
+    "status": "responded",
+    "response_time_seconds": 3.19,
+    "bot_response": "Hola\n3:01 p. m.",
+    "error": null
+  },
+  {
+    "id": "573156704037_20260604_150115",
+    "phone": "573156704037",
+    "name": "Bot HUN",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T15:01:15.814168",
+    "status": "responded",
+    "response_time_seconds": 4.07,
+    "bot_response": "Hola\n3:01 p. m.",
+    "error": null
+  },
+  {
+    "id": "573167668245_20260604_150149",
+    "phone": "573167668245",
+    "name": "Bot Cedimed",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T15:01:49.905561",
+    "status": "responded",
+    "response_time_seconds": 3.63,
+    "bot_response": "Para nosotros es importante que sepas que todos tus datos serán tratados con la responsabilidad y transparencia que caracterizan a Diagnóstico Cedimed. Aquí puedes consultar nuestra política de tratamiento de datos: https://bit.ly/46ihhMN\n\n\n\n¿Acepta los términos para continuar?\n\nSí\nNo\n9:01 a. m.\nSi\nNo",
+    "error": null
+  },
+  {
+    "id": "573229471699_20260604_150221",
+    "phone": "573229471699",
+    "name": "Bot Messer",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T15:02:21.325453",
+    "status": "responded",
+    "response_time_seconds": 3.11,
+    "bot_response": "Hola\n3:02 p. m.",
+    "error": null
+  },
+  {
+    "id": "573132654242_20260604_150248",
+    "phone": "573132654242",
+    "name": "Bot Maple",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T15:02:48.388332",
+    "status": "responded",
+    "response_time_seconds": 3.27,
+    "bot_response": "Hola\n3:03 p. m.",
+    "error": null
+  },
+  {
+    "id": "573162413544_20260604_150312",
+    "phone": "573162413544",
+    "name": "Bot Clinicos Ips",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T15:03:12.915110",
+    "status": "responded",
+    "response_time_seconds": 3.3,
+    "bot_response": "Hola\n3:03 p. m.",
+    "error": null
+  },
+  {
+    "id": "573154704775_20260604_150337",
+    "phone": "573154704775",
+    "name": "Bot Clinica de la mujer",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T15:03:37.033614",
+    "status": "responded",
+    "response_time_seconds": 3.25,
+    "bot_response": "Hola\n3:03 p. m.",
+    "error": null
+  },
+  {
+    "id": "573137826163_20260604_150357",
+    "phone": "573137826163",
+    "name": "Bot Guadalupe",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T15:03:57.815730",
+    "status": "responded",
+    "response_time_seconds": 3.12,
+    "bot_response": "Hola\n3:04 p. m.",
+    "error": null
+  },
+  {
+    "id": "573124139143_20260604_150427",
+    "phone": "573124139143",
+    "name": "Bot Organizacion Vid Salud Vid",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T15:04:27.497317",
+    "status": "responded",
+    "response_time_seconds": 3.31,
+    "bot_response": "Hola\n3:04 p. m.",
+    "error": null
+  },
+  {
+    "id": "573214989585_20260604_150450",
+    "phone": "573214989585",
+    "name": "Bot Villavicencio",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T15:04:50.492995",
+    "status": "responded",
+    "response_time_seconds": 3.15,
+    "bot_response": "Hola\n3:05 p. m.",
+    "error": null
+  },
+  {
+    "id": "573224575712_20260604_150514",
+    "phone": "573224575712",
+    "name": "Bot UPB",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T15:05:14.421578",
+    "status": "responded",
+    "response_time_seconds": 3.31,
+    "bot_response": "Hola\n3:05 p. m.",
+    "error": null
   }
 ]
