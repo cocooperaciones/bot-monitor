@@ -5124,5 +5124,126 @@
     "response_time_seconds": 3.24,
     "bot_response": "Hola\n9:03 a. m.",
     "error": null
+  },
+  {
+    "id": "573184444400_20260604_110031",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T11:00:31.157244",
+    "status": "responded",
+    "response_time_seconds": 3.4,
+    "bot_response": "CHATBOT COOPSANA\nBienvenido  a Coopsana IPS , al servicio de la salud de nuestros usuarios y el bienestar de todos.\r\n\r\nSeñor usuario.  Le informamos que nuestro servicio de toma de muestras de laboratorio clínico ubicado en la sede Coopsana Centro se ha trasladado a la sede Coopsana Avenida Oriental    ubicada en la Carrera 46 # 57 – 10 Int. 301  . ¡Te esperamos en la sede Av. Oriental para continuar con tu atención!  \r\n\r\nPara solicitudes de autorizaciones (fórmulas de medicamentos, exámenes de ",
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://web.whatsapp.com/\", waiting until \"load\"\n"
+  },
+  {
+    "id": "573156704037_20260604_110200",
+    "phone": "573156704037",
+    "name": "Bot HUN",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T11:02:00.235834",
+    "status": "error",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "No se encontro el input del chat."
+  },
+  {
+    "id": "573167668245_20260604_110237",
+    "phone": "573167668245",
+    "name": "Bot Cedimed",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T11:02:37.772198",
+    "status": "error",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "No se encontro el input del chat."
+  },
+  {
+    "id": "573229471699_20260604_110409",
+    "phone": "573229471699",
+    "name": "Bot Messer",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T11:04:09.939818",
+    "status": "responded",
+    "response_time_seconds": 3.43,
+    "bot_response": "Hola\n11:04 a. m.",
+    "error": null
+  },
+  {
+    "id": "573132654242_20260604_110449",
+    "phone": "573132654242",
+    "name": "Bot Maple",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T11:04:49.368325",
+    "status": "responded",
+    "response_time_seconds": 3.2,
+    "bot_response": "Hola\n11:05 a. m.",
+    "error": null
+  },
+  {
+    "id": "573162413544_20260604_110513",
+    "phone": "573162413544",
+    "name": "Bot Clinicos Ips",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T11:05:13.879839",
+    "status": "responded",
+    "response_time_seconds": 3.34,
+    "bot_response": "Hola\n11:05 a. m.",
+    "error": null
+  },
+  {
+    "id": "573154704775_20260604_110537",
+    "phone": "573154704775",
+    "name": "Bot Clinica de la mujer",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T11:05:37.372901",
+    "status": "responded",
+    "response_time_seconds": 3.24,
+    "bot_response": "Hola\n11:05 a. m.",
+    "error": null
+  },
+  {
+    "id": "573137826163_20260604_110606",
+    "phone": "573137826163",
+    "name": "Bot Guadalupe",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T11:06:06.139678",
+    "status": "responded",
+    "response_time_seconds": 3.15,
+    "bot_response": "Hola\n11:06 a. m.",
+    "error": null
+  },
+  {
+    "id": "573124139143_20260604_110630",
+    "phone": "573124139143",
+    "name": "Bot Organizacion Vid Salud Vid",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T11:06:30.412932",
+    "status": "responded",
+    "response_time_seconds": 3.17,
+    "bot_response": "Hola\n11:06 a. m.",
+    "error": null
+  },
+  {
+    "id": "573214989585_20260604_110656",
+    "phone": "573214989585",
+    "name": "Bot Villavicencio",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T11:06:56.744496",
+    "status": "responded",
+    "response_time_seconds": 3.24,
+    "bot_response": "Hola\n11:07 a. m.",
+    "error": null
+  },
+  {
+    "id": "573224575712_20260604_110722",
+    "phone": "573224575712",
+    "name": "Bot UPB",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-04T11:07:22.245646",
+    "status": "responded",
+    "response_time_seconds": 6.1,
+    "bot_response": "Hola\n11:07 a. m.",
+    "error": null
   }
 ]
