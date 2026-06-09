@@ -6576,5 +6576,126 @@
     "response_time_seconds": 3.06,
     "bot_response": "Hola\n6:05 p. m.",
     "error": null
+  },
+  {
+    "id": "573184444400_20260608_182504",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-08T18:25:04.860011",
+    "status": "responded",
+    "response_time_seconds": 3.36,
+    "bot_response": "Hola\n6:25 p. m.",
+    "error": null
+  },
+  {
+    "id": "573156704037_20260608_184323",
+    "phone": "573156704037",
+    "name": "Bot HUN",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-08T18:43:23.380157",
+    "status": "error",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "No se encontro el input del chat."
+  },
+  {
+    "id": "573167668245_20260608_185502",
+    "phone": "573167668245",
+    "name": "Bot Cedimed",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-08T18:55:02.284310",
+    "status": "error",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Page.goto: Timeout 90000ms exceeded.\nCall log:\n  - navigating to \"https://web.whatsapp.com/send?phone=573167668245&text=&source=&data=\", waiting until \"load\"\n"
+  },
+  {
+    "id": "573229471699_20260608_185830",
+    "phone": "573229471699",
+    "name": "Bot Messer",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-08T18:58:30.830620",
+    "status": "responded",
+    "response_time_seconds": 3.78,
+    "bot_response": "Hola\n6:58 p. m.",
+    "error": null
+  },
+  {
+    "id": "573132654242_20260608_185855",
+    "phone": "573132654242",
+    "name": "Bot Maple",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-08T18:58:55.022609",
+    "status": "responded",
+    "response_time_seconds": 5.72,
+    "bot_response": "Hola\n6:59 p. m.",
+    "error": null
+  },
+  {
+    "id": "573162413544_20260608_193109",
+    "phone": "573162413544",
+    "name": "Bot Clinicos Ips",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-08T19:31:09.941661",
+    "status": "error",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "No se encontro el input del chat."
+  },
+  {
+    "id": "573154704775_20260608_194748",
+    "phone": "573154704775",
+    "name": "Bot Clinica de la mujer",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-08T19:47:48.117266",
+    "status": "error",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Page.goto: net::ERR_NETWORK_CHANGED at https://web.whatsapp.com/send?phone=573154704775&text=&source=&data=\nCall log:\n  - navigating to \"https://web.whatsapp.com/send?phone=573154704775&text=&source=&data=\", waiting until \"load\"\n"
+  },
+  {
+    "id": "573137826163_20260608_195928",
+    "phone": "573137826163",
+    "name": "Bot Guadalupe",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-08T19:59:28.830892",
+    "status": "responded",
+    "response_time_seconds": 3.06,
+    "bot_response": "Hola\n7:59 p. m.",
+    "error": null
+  },
+  {
+    "id": "573124139143_20260608_195952",
+    "phone": "573124139143",
+    "name": "Bot Organizacion Vid Salud Vid",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-08T19:59:52.730122",
+    "status": "responded",
+    "response_time_seconds": 3.26,
+    "bot_response": "Hola\n8:00 p. m.",
+    "error": null
+  },
+  {
+    "id": "573214989585_20260608_200014",
+    "phone": "573214989585",
+    "name": "Bot Villavicencio",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-08T20:00:14.687671",
+    "status": "error",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Page.goto: Timeout 90000ms exceeded.\nCall log:\n  - navigating to \"https://web.whatsapp.com/send?phone=573214989585&text=&source=&data=\", waiting until \"load\"\n"
+  },
+  {
+    "id": "573224575712_20260608_201648",
+    "phone": "573224575712",
+    "name": "Bot UPB",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-08T20:16:48.963839",
+    "status": "error",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "No se encontro el input del chat."
   }
 ]
