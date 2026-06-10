@@ -7181,5 +7181,126 @@
     "response_time_seconds": 3.05,
     "bot_response": "Hola\n7:02 a. m.",
     "error": null
+  },
+  {
+    "id": "573184444400_20260610_090254",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-10T09:02:54.927602",
+    "status": "responded",
+    "response_time_seconds": 3.06,
+    "bot_response": "Hola\n9:03 a. m.",
+    "error": null
+  },
+  {
+    "id": "573156704037_20260610_090316",
+    "phone": "573156704037",
+    "name": "Bot HUN",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-10T09:03:16.060914",
+    "status": "responded",
+    "response_time_seconds": 3.03,
+    "bot_response": "Hola\n9:03 a. m.",
+    "error": null
+  },
+  {
+    "id": "573167668245_20260610_090332",
+    "phone": "573167668245",
+    "name": "Bot Cedimed",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-10T09:03:32.467784",
+    "status": "responded",
+    "response_time_seconds": 3.06,
+    "bot_response": "Hola\n9:03 a. m.",
+    "error": null
+  },
+  {
+    "id": "573229471699_20260610_090350",
+    "phone": "573229471699",
+    "name": "Bot Messer",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-10T09:03:50.852789",
+    "status": "responded",
+    "response_time_seconds": 3.08,
+    "bot_response": "Hola\n9:04 a. m.",
+    "error": null
+  },
+  {
+    "id": "573132654242_20260610_090408",
+    "phone": "573132654242",
+    "name": "Bot Maple",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-10T09:04:08.424018",
+    "status": "responded",
+    "response_time_seconds": 3.03,
+    "bot_response": "Hola\n9:04 a. m.",
+    "error": null
+  },
+  {
+    "id": "573162413544_20260610_090423",
+    "phone": "573162413544",
+    "name": "Bot Clinicos Ips",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-10T09:04:23.493881",
+    "status": "responded",
+    "response_time_seconds": 3.05,
+    "bot_response": "Hola\n9:04 a. m.",
+    "error": null
+  },
+  {
+    "id": "573154704775_20260610_090439",
+    "phone": "573154704775",
+    "name": "Bot Clinica de la mujer",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-10T09:04:39.411904",
+    "status": "responded",
+    "response_time_seconds": 3.03,
+    "bot_response": "Hola\n9:04 a. m.",
+    "error": null
+  },
+  {
+    "id": "573137826163_20260610_090454",
+    "phone": "573137826163",
+    "name": "Bot Guadalupe",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-10T09:04:54.205823",
+    "status": "responded",
+    "response_time_seconds": 3.06,
+    "bot_response": "Hola\n9:05 a. m.",
+    "error": null
+  },
+  {
+    "id": "573124139143_20260610_090509",
+    "phone": "573124139143",
+    "name": "Bot Organizacion Vid Salud Vid",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-10T09:05:09.748972",
+    "status": "responded",
+    "response_time_seconds": 3.08,
+    "bot_response": "Hola\n9:05 a. m.",
+    "error": null
+  },
+  {
+    "id": "573214989585_20260610_090526",
+    "phone": "573214989585",
+    "name": "Bot Villavicencio",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-10T09:05:26.223716",
+    "status": "responded",
+    "response_time_seconds": 3.03,
+    "bot_response": "Hola, bienvenido a ESE Municipal de Villavicencio.\r\n\n \r\n\n indícanos por favor cuál es tu número de identificación (Solo números) :\r\n\n\r\n\n Estimado usuario, en caso de presentar inconvenientes en el proceso de agendamiento escriba la palabra ‘Reiniciar’ y comience nuevamente.\n7:02 a. m.",
+    "error": null
+  },
+  {
+    "id": "573224575712_20260610_090543",
+    "phone": "573224575712",
+    "name": "Bot UPB",
+    "message_sent": "Hola",
+    "timestamp": "2026-06-10T09:05:43.187052",
+    "status": "responded",
+    "response_time_seconds": 3.06,
+    "bot_response": "Hola, soy Anita, tu asistente virtual, gracias por ponerte en contacto con la Clínica Universitaria Bolivariana.\r\n\n \r\n\nImportante \r\n\nSi presentas alguna inquietud con tus citas, comunícate con un asesor llamando al (604) 3220023.\r\n\nTen en cuenta: para citas de primera vez por SOAT (independientemente de la Especialidad), debes acercarte de manera presencial a la Clínica Universitaria Bolivariana, en la Oficina de SOAT, primer piso, donde te darán las indicaciones para continuar con tu trámite.\r\n",
+    "error": null
   }
 ]
