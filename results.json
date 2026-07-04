@@ -15772,5 +15772,126 @@
     "response_time_seconds": 3.14,
     "bot_response": "Hola\n3:03 p. m.",
     "error": null
+  },
+  {
+    "id": "573184444400_20260704_110931",
+    "phone": "573184444400",
+    "name": "Bot Coopsana",
+    "message_sent": "Hola",
+    "timestamp": "2026-07-04T11:09:31.031030",
+    "status": "responded",
+    "response_time_seconds": 3.07,
+    "bot_response": "Hola\n11:09 a. m.",
+    "error": null
+  },
+  {
+    "id": "573156704037_20260704_110947",
+    "phone": "573156704037",
+    "name": "Bot HUN",
+    "message_sent": "Hola",
+    "timestamp": "2026-07-04T11:09:47.966080",
+    "status": "responded",
+    "response_time_seconds": 3.03,
+    "bot_response": "Hola\n11:09 a. m.",
+    "error": null
+  },
+  {
+    "id": "573167668245_20260704_111001",
+    "phone": "573167668245",
+    "name": "Bot Cedimed",
+    "message_sent": "Hola",
+    "timestamp": "2026-07-04T11:10:01.367435",
+    "status": "responded",
+    "response_time_seconds": 3.03,
+    "bot_response": "Hola\n11:10 a. m.",
+    "error": null
+  },
+  {
+    "id": "573229471699_20260704_111014",
+    "phone": "573229471699",
+    "name": "Bot Messer",
+    "message_sent": "Hola",
+    "timestamp": "2026-07-04T11:10:14.301613",
+    "status": "responded",
+    "response_time_seconds": 3.04,
+    "bot_response": "Hola\n11:10 a. m.",
+    "error": null
+  },
+  {
+    "id": "573132654242_20260704_111026",
+    "phone": "573132654242",
+    "name": "Bot Maple",
+    "message_sent": "Hola",
+    "timestamp": "2026-07-04T11:10:26.556642",
+    "status": "responded",
+    "response_time_seconds": 3.03,
+    "bot_response": "Hola\n11:10 a. m.",
+    "error": null
+  },
+  {
+    "id": "573162413544_20260704_111038",
+    "phone": "573162413544",
+    "name": "Bot Clinicos Ips",
+    "message_sent": "Hola",
+    "timestamp": "2026-07-04T11:10:38.627260",
+    "status": "responded",
+    "response_time_seconds": 3.03,
+    "bot_response": "Hola\n11:10 a. m.",
+    "error": null
+  },
+  {
+    "id": "573154704775_20260704_111050",
+    "phone": "573154704775",
+    "name": "Bot Clinica de la mujer",
+    "message_sent": "Hola",
+    "timestamp": "2026-07-04T11:10:50.912987",
+    "status": "responded",
+    "response_time_seconds": 3.03,
+    "bot_response": "Hola\n11:10 a. m.",
+    "error": null
+  },
+  {
+    "id": "573137826163_20260704_111103",
+    "phone": "573137826163",
+    "name": "Bot Guadalupe",
+    "message_sent": "Hola",
+    "timestamp": "2026-07-04T11:11:03.253375",
+    "status": "responded",
+    "response_time_seconds": 3.03,
+    "bot_response": "Hola\n11:11 a. m.",
+    "error": null
+  },
+  {
+    "id": "573124139143_20260704_111115",
+    "phone": "573124139143",
+    "name": "Bot Organizacion Vid Salud Vid",
+    "message_sent": "Hola",
+    "timestamp": "2026-07-04T11:11:15.787519",
+    "status": "responded",
+    "response_time_seconds": 3.03,
+    "bot_response": "Hola\n11:11 a. m.",
+    "error": null
+  },
+  {
+    "id": "573214989585_20260704_111127",
+    "phone": "573214989585",
+    "name": "Bot Villavicencio",
+    "message_sent": "Hola",
+    "timestamp": "2026-07-04T11:11:27.324521",
+    "status": "responded",
+    "response_time_seconds": 3.03,
+    "bot_response": "Hola\n11:11 a. m.",
+    "error": null
+  },
+  {
+    "id": "573224575712_20260704_111140",
+    "phone": "573224575712",
+    "name": "Bot UPB",
+    "message_sent": "Hola",
+    "timestamp": "2026-07-04T11:11:40.063457",
+    "status": "responded",
+    "response_time_seconds": 3.04,
+    "bot_response": "Hola\n11:11 a. m.",
+    "error": null
   }
 ]
