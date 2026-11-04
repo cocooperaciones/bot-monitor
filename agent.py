@@ -90,7 +90,7 @@ async def probe_bot(page, phone, name, message):
     }
     try:
         log.info(f"[{name}] Abriendo chat...")
-        await page.goto(build_wa_url(phone), timeout=60_000)
+        await page.goto(build_wa_url(phone), timeout=90_000)
 
         input_sel = 'div[contenteditable="true"][data-tab="10"]'
         try:
@@ -176,7 +176,7 @@ async def run_probes(contacts):
         await page.goto("https://web.whatsapp.com", timeout=60_000)
         log.info("Esperando WhatsApp Web...")
         try:
-            await page.wait_for_selector('div[data-testid="chat-list"]', timeout=120_000)
+            await page.wait_for_selector('div[data-testid="chat-list"]', timeout=180_000)
             log.info("WhatsApp Web listo.")
         except PWTimeout:
             log.error("No se detecto sesion activa.")
