@@ -44702,5 +44702,27 @@
     "response_time_seconds": 3.14,
     "bot_response": "Hola\n1:23 p. m.",
     "error": null
+  },
+  {
+    "id": "573043372501_20261104_133029",
+    "phone": "573043372501",
+    "name": "MUTATA",
+    "message_sent": "Hola",
+    "timestamp": "2026-11-04T13:30:29.676781",
+    "status": "timeout",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Sin respuesta en 120s"
+  },
+  {
+    "id": "573156704037_20261104_133240",
+    "phone": "573156704037",
+    "name": "Bot HUN",
+    "message_sent": "Hola",
+    "timestamp": "2026-11-04T13:32:40.077153",
+    "status": "timeout",
+    "response_time_seconds": null,
+    "bot_response": null,
+    "error": "Sin respuesta en 120s"
   }
 ]
